@@ -19,7 +19,9 @@
         nav{
             background-color: #53777a;
             border: 40px solid #53777a;
-            padding-bottom: 60px;           
+            padding-bottom: 60px;  
+            display: flex;
+            justify-content: space-between;        
         }
 
         nav ul{
@@ -42,6 +44,7 @@
         }
         
         #foto{
+            margin-bottom: 100px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -50,11 +53,22 @@
         #foto-carolina{
             margin-top: -120px;
             border: 20px solid #811628;
+            border-radius: 50%;
         }
 
         h1{
             color: #811628;
             justify-content: center;
+        }
+
+        #descricao {
+            height: 500px;
+            margin-left: 50px;
+            margin-right: 50px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
             
 
@@ -63,26 +77,32 @@
   <body>
     <header>
         <nav>
+            <h1>Carolina Kauark Fontes</h1> 
             <ul>
-                <li><a href="#descricao">Sobre mim</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#about-me">Sobre mim</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
-        <!-- <img src="capa_linkedin_perfil_pessoal03__5_.png" alt="Capa com a logo da Trybe"> -->
     </header>
+
     <section>
         <div id="foto">
             <img src="Carolina.png" alt="Foto de Carolina" width="500" id="foto-carolina">
             <div id="circulo"></div>
         </div>
-        <div>
-            <h1>Carolina Kauark Fontes</h1>            
-            <h2 id="descricao">Sobre mim</h2>
+    </section>
+
+    <!-- SECTION 1 - ABOUT ME -->
+    <section id="about-me">
+        <div id="descricao">           
+            <h2>Sobre mim</h2>
             <p>Muito prazer!<br> Sou Carolina, baiana nascida em Itabuna, morando atualmente em <strong>Salvador-BA</strong>. Formada em Arquitetura e Urbanismo pela Universidade Federal de Ouro Preto e mergulhando na área de tecnologia como estudante de <strong>Desenvolvimento Web</strong> na <a href ="https://www.betrybe.com/" target="_blank">Trybe.</a></p>
         </div>
     </section>
-    <section id="habilidades">
+
+    <!-- SECTION 2 - SKILLS -->
+    <section id="skills">
         <div>
             <h2>Habilidades</h2>
             <h3>Como Desenvolvedora Web</h3>
@@ -101,8 +121,10 @@
             </ul>
         </div>
     </section>
+
+    <!-- FOOTER -CONTACT -->
     <footer>
-        <div id="contato">
+        <div id="contact">
             <h3>Contato</h3>
             <ul>
                 <li>ckauark@gmail.com</li>
