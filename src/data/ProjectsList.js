@@ -21,7 +21,7 @@ const projectsList = [
     OBS: O layout do projeto foi feito para o formato Android 360 x 640. O layout para desktop está em construção.`,
     descriptionEn: `This is a front end project for a recipe application that uses an open API as a database. The app has 7 different pages, being able to log in, choose the recipe and see the follow-up suggestions, see the details, follow the instructions step by step, bookmark and see the user's ready-made recipes.
     PS: The project layout was made for Android 360 x 640 format. The desktop layout is under construction.`,
-    link: 'https://carolinakauark.github.io/Project-shopingCart/',
+    link: 'https://app-recipes-project.vercel.app/',
     skills: [<JSIcon />, <ReactIcon />, <BootStrapicon />, <RTLIcon />]  
   },
   {
