@@ -162,7 +162,7 @@
 
     &__titles {
       flex-direction: row-reverse;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       margin-left: 0rem;
       margin-top: 0rem;
 
@@ -173,7 +173,7 @@
 
 
       &__type1 {
-        @include headings(1.3rem, 300);
+        @include headings(1.5rem, 300);
         letter-spacing: 0.1rem;
         margin: 1rem 0 1.2rem;
       }
@@ -181,11 +181,11 @@
       &__type2 {
         margin-bottom: 0.5rem;
         text-align: start; 
-        @include headings(1rem, 400);
+        @include headings(1.2rem, 400);
       }
   
       &__name {
-        @include headings(2.5rem, 700);
+        @include headings(3rem, 700);
         font-style: italic;
       }
 

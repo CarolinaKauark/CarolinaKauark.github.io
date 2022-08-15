@@ -53,14 +53,4 @@ const projectsList = [
   },
 ]
 
-// const projectsListEn = [
-//   {
-//     title: 'Trivia Game',
-//     thumbnail: trivia,
-//     descriptionEn: 'The Trivia Game project is a question and answer game made in group. It is a great project to be applied in schools in order to reinforce the knowledge of the subject. In this project we use an open API as a base. Project made only with front-end knowledge.',
-//     link: 'https://carolinakauark.github.io/trivia-game/',
-//     skills: [<JSIcon />, <ReactIcon />, <SassIcon />, <ReduxIcon />]  
-//   }
-// ]
-
 export default projectsList;

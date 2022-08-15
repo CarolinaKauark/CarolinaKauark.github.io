@@ -1,7 +1,8 @@
 @import '../../styles/variables.scss';
 
 .skills {
-
+    max-width: 80%;
+    margin: auto;
     &_title {
         margin: 2rem 0 3rem;
         text-align: center;
@@ -20,13 +21,16 @@
         margin: auto;
         flex-flow: row wrap;
 
-        &_icons {
+        &_div {
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+
+        &_icons {
             margin: 1rem 2rem;
-            width: 88px;
-            fill: $gray-blue;
+            width: 50px;
+            fill: $dark-blue;
 
             p {
                 margin-top: 0.5rem;
@@ -39,8 +43,13 @@
 
     .skills {
         &_container{
+            &_div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
             &_icons {
-                width: 90px;
+                width: 60px;
             }
         }
     }
