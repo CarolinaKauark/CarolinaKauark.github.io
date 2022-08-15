@@ -1,0 +1,24 @@
+@import './styles/variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.App {
+  //max-height: 100vh;
+  margin-bottom: 1rem;
+
+  &__pages{
+    max-width: 1350px;
+    display: flex;
+    align-items: center;
+  }  
+}
+
+
+
+
+

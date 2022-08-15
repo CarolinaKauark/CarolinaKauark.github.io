@@ -1,0 +1,51 @@
+@import '../../styles/variables.scss';
+
+.skills {
+
+    &_title {
+        margin: 2rem 0 3rem;
+        text-align: center;
+
+        &_1 {
+            font-family: $font-exo;
+            color: $orange;
+            text-decoration: underline;
+        }
+    }
+
+    &_container {
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        margin: auto;
+        flex-flow: row wrap;
+
+        &_icons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1rem 2rem;
+            width: 88px;
+            fill: $gray-blue;
+
+            p {
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 720px) {
+
+    .skills {
+        &_container{
+            &_icons {
+                width: 90px;
+            }
+        }
+    }
+
+}
+
+
+

@@ -1,0 +1,116 @@
+@import '../../styles/variables.scss';
+
+.projects {
+    display: flex;
+    flex-direction: column;
+
+    &_div {
+        margin: 1rem;
+
+        &_title {
+            font-family: $font-pt;
+            color: $orange;
+            text-decoration: underline;
+        }
+    }
+
+
+    &_section {
+        display: flex;
+        flex-direction: column;
+        
+        &_container {
+            display: flex;
+            flex-direction: column;
+            //background-color: $white;
+            padding: 0.5rem;
+            border-radius: 0.2rem;
+            box-shadow: (2px 2px 6px 2px rgba(0, 0, 0, 0.25));
+            margin: 0.5rem 1rem; 
+            text-decoration: none;
+
+            &_div {
+                max-width: 100%; 
+                margin: auto;
+
+                &_img {
+                    width: 100%;
+                    border-radius: 5px;
+                    
+                }
+            }
+
+            &_info {
+                margin: 5px;
+                max-width: 100%; 
+
+                &_flex {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    &_icon {
+                        color: $orange;
+                        font-size: 1.5rem;
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                &_title {
+                    font-family: $font-exo;
+                    color: $orange;
+                    margin-bottom: 1rem;
+                }
+
+                &_description {
+                    font-family: $font-exo;
+                    margin-bottom: 1rem;
+                    color: $dark-blue;
+                }
+
+                &_skills {
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    max-width: 100%;
+                    fill: black;
+
+                    &_type {
+                        width: 40px;
+                        margin-right: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 720px) {
+    .projects {
+        &_div {
+            margin: 2rem;
+        }
+
+        &_section {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+            &_container {
+                width: 40%;
+
+                &_div {
+                    max-width: 100%; 
+                    margin: auto;
+
+                    &_img {
+                        max-width: 100%;
+                        border-radius: 5px;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+

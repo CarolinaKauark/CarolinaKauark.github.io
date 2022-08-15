@@ -1,0 +1,248 @@
+@import '../../styles/variables.scss';
+
+.cursor {
+  display: inline-block;
+  background-color: $gray-blue;
+  margin-left: 0.1rem;
+  width: 0.1rem;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%  { background-color: $gray-blue; }
+  49% { background-color: $gray-blue; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: $gray-blue; }
+}
+.none{
+  animation: none;
+}
+
+.home {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 1rem 0rem;
+
+
+  &__titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    &__type1 {
+      font-family: $font-exo;
+      @include headings(0.9rem, 300);
+      letter-spacing: 0.1rem;
+      margin-bottom: 0.5rem;
+      color: $gray-blue;
+    }
+
+    &__type2 {
+      font-family: $font-exo;
+      @include headings(0.8rem, 300);
+
+      margin-bottom: 0.1rem;
+      text-align: center;
+    }
+
+    &__name {
+      font-family: $font-pt;
+      color: $dark-blue;
+      @include headings(1.5rem, 700);
+      font-style: italic;
+      margin-bottom: 1.1rem;
+    }
+
+    &__button {
+      color: $white;
+      font-family: $font-exo;
+      @include headings(0.9rem, 500); 
+      border: none;
+      background-color: $dark-blue;
+      padding: 0.3rem 0.5rem 0.4rem;
+      border-radius: 0.1rem;
+      max-width: 80%;
+      box-shadow: (0px 3px 6px rgba(0, 0, 0, 0.25));
+      margin: 0.5rem 0;
+    }
+
+    &__button:hover {
+      transform: scale(1.05);
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    &__icon {
+      margin: 1rem;
+      display: flex;
+      align-items: center;
+
+      &__line {
+        width: 4rem;
+        height: 0.1rem;
+        background-color: $orange;
+      }
+      
+      &__logo {
+        color: $orange;
+        font-size: 1.5rem;
+        margin: 0 0.5rem;
+      }
+
+      &__logo:hover {
+        transform: scale(0.95);
+        cursor: pointer;
+        color: #e681bf;
+      }
+    }
+  }
+
+  &__profile__pic {
+    width: 50%;
+    margin: 0 auto 0.6rem;
+    
+
+    img {
+      max-width: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  &__line {
+    height: 0.15rem;
+    width: 8rem;
+    margin: 0.8rem 0 1rem;
+    background-color: $light-blue;
+  }
+
+  &_line:hover {
+    cursor: pointer;
+  }
+
+  &_line_1:hover {
+      color: $orange;
+  }
+}
+
+
+@media (min-width: 480px) and (max-width: 720px) {
+  .home {
+    &__titles {
+      &__type1 {
+        @include headings(1.2rem, 300);
+      }
+
+      &__type2 {
+        @include headings(1.1rem, 300);
+      }
+
+      &__name {
+        @include headings(2rem, 700);
+      }
+    }
+  }
+}
+
+
+@media (min-width: 720px) {
+  .home {
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__titles {
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+      margin-left: 0rem;
+      margin-top: 0rem;
+
+      &_container {
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+
+
+      &__type1 {
+        @include headings(1.3rem, 300);
+        letter-spacing: 0.1rem;
+        margin: 1rem 0 1.2rem;
+      }
+  
+      &__type2 {
+        margin-bottom: 0.5rem;
+        text-align: start; 
+        @include headings(1rem, 400);
+      }
+  
+      &__name {
+        @include headings(2.5rem, 700);
+        font-style: italic;
+      }
+
+      &__button {
+        @include headings(1rem, 500);
+        padding: 0.6rem 0.3rem 0.6rem;
+        box-shadow: (0px 6px 6px rgba(0, 0, 0, 0.25));
+        margin-top: 1.8rem;
+        width: 60%;
+      }
+
+      &__icon {
+        margin: 1rem 0.5rem 0 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__line {
+          width: 0.1rem;
+          height: 8rem;
+          margin-left: -0.5rem;
+        }
+        
+        &__logo {
+          margin: 0.5rem;
+          color: $orange;
+          font-size: 1.5rem;
+          margin-right: 1rem;
+        }
+
+        &__logo:hover {
+          transform: scale(0.95);
+          cursor: pointer;
+          color: #e681bf;
+        }
+      }
+    }
+
+    &__profile__pic {
+      max-width: 30%;
+      margin: 1rem 1rem 1.1rem;
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    &__line {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1350px) {
+  .home{
+    &__profile__pic {
+      max-width: 30%;
+    }
+  }
+}

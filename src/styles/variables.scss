@@ -1,0 +1,22 @@
+$dark-blue: #073341;
+$gray-blue: #2f4b4d;
+$light-blue:  #8aacab;
+$beige: #ebe7b7;
+$orange: #ee90ca;
+$yellow: #ecc039;
+$white: #ebebeb;
+
+// $dark-blue: #063d41;
+// $gray-blue: #2f4b4d;
+
+$font-exo: 'Raleway', sans-serif;
+// $font-pt: 'PT Serif', serif;
+// $font-pt: 'Montserrat', sans-serif;
+$font-pt:'Raleway', sans-serif;
+
+
+@mixin headings($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+
+}

@@ -1,0 +1,176 @@
+@import '../../styles/variables.scss';
+
+.line {
+    width: 100vw;
+    height: 0.1rem;
+    background-color: $dark-blue;
+}
+
+.contact {
+    margin: 1rem;
+
+    &_mail {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        &_h2 {
+            text-align: center;
+            font-family: $font-pt;
+            @include headings(1.5rem, 500);
+            font-style: italic;
+            color: $orange;
+            margin: 1rem 0; 
+        }
+
+        &_a {
+            margin-bottom: 1rem;
+        }
+
+        &_a:hover {
+            box-shadow: (0px 3px 6px rgba(0, 0, 0, 0.25));
+        }
+        
+    }
+
+    &_title {
+        margin: 1rem 0;
+        
+        &_1 {
+            color: $gray-blue;
+            font-family: $font-exo;
+            @include headings(1rem, 400);
+
+        }
+    }
+
+    &_line {
+        width: 100vw;
+        height: 0.1rem;
+        background-color: $light-blue;
+        margin-top: 1rem;
+    }
+
+    &_container {
+        display: flex;
+        justify-content: space-between;
+
+        &_info {
+            &_location {
+                color: $light-blue;
+                font-family: $font-exo;
+                @include headings(0.9rem, 400);
+
+            }
+
+            &_1 {
+                display: flex;
+                margin: 0.5rem 0;
+                color: $gray-blue;
+                font-family: $font-exo;
+                @include headings(0.9rem, 400);
+
+            }
+
+            &_copyright {
+                color: $light-blue;
+                font-family: $font-pt;
+                margin-top: 1rem;
+                text-align: center;
+                @include headings(0.9rem, 400);
+            }
+        }
+
+        &_web {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            &_icon {
+                font-size: 1.5rem;
+                color: $gray-blue;
+            }
+        }
+    }
+    
+}
+
+.tag {
+    color: $light-blue;
+    margin-right: 0.4rem;
+}
+
+.web_text {
+    display: none;
+}
+
+@media (min-width: 720px) {
+    .contact {  
+        height: 22%;
+        margin: 2rem;
+
+        &_mail {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+    
+            &_h2 {
+                text-align: center;
+                font-family: $font-pt;
+                @include headings(2rem, 500);
+                font-style: italic;
+                color: $orange;
+                margin-bottom: 1rem; 
+            }
+    
+            &_a {
+                margin-bottom: 1rem;
+            }
+    
+            &_a:hover {
+                box-shadow: (0px 3px 6px rgba(0, 0, 0, 0.25));
+            }
+            
+        }
+
+        &_title {            
+            &_1 {
+                @include headings(1.2rem, 400);
+
+            }
+        }
+    
+        &_container {    
+            &_info {
+                &_location {
+                    @include headings(1.1rem, 400);
+                }
+    
+                &_1 {
+                    @include headings(1rem, 400);
+                }
+            }
+            &_web {
+    
+                &_icon {
+                    text-decoration: none;
+                    font-size: 1.5rem;
+                    color: $gray-blue;
+                    margin-right: 1rem;
+                    text-align: end;
+                }
+            }
+        }
+    }
+
+    .web_text {
+        display: inline;
+        margin-right: 0.5rem;
+        @include headings(1rem, 500);
+        color: $gray-blue;
+        font-family: $font-exo;
+    }
+
+}
