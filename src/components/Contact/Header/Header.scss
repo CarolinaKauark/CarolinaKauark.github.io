@@ -69,6 +69,10 @@
           }
     
           &__ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             list-style: none;
             position: absolute;
             top: 6vh;
@@ -78,7 +82,7 @@
             background-color: $white;
             transform: translateX(100%);
             transition: 0.5s;
-            display: none;
+            // display: none;
           
             &__link {
               text-decoration: none;
@@ -100,10 +104,6 @@
           }
     
           &__ul.active {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             transform: translateX(0);
             transition: 0.5s;
           }
