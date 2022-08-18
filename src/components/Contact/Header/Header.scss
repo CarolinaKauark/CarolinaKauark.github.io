@@ -1,7 +1,12 @@
 @import '../../../styles/variables.scss';
 
+* {
+  overflow-x: hidden;
+}
+
 .header {
   box-shadow: (0px 4px 6px rgba(0, 0, 0, 0.25));
+  overflow-x: hidden;
 
   &__bar {
       display: flex;
@@ -71,13 +76,10 @@
             right: 0;
             height: 94vh;
             background-color: $white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             transform: translateX(100%);
             transition: 0.5s;
-    
+            display: none;
+          
             &__link {
               text-decoration: none;
               color: $dark-blue;
@@ -88,11 +90,9 @@
             }
     
             &__link:hover {
-              // @include headings(1.2rem, 400);
               transform: scale(1.02);
               cursor: pointer;
               transition: 0.3s;
-              // background-color: $dark-blue;
               color: $light-blue;
               width: 100%;
               text-align: center;
@@ -100,6 +100,10 @@
           }
     
           &__ul.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             transform: translateX(0);
             transition: 0.5s;
           }
@@ -109,6 +113,8 @@
   
   @media (min-width: 720px) {
     .header__bar {
+      overflow-x: hidden;
+
       &__logo {
         margin-left: 2rem;
       }
@@ -118,7 +124,9 @@
   @media (min-width: 820px) {
     .header__bar {
       height: 10vh;
-      overflow-x: hidden;
+      display: flex;
+      // overflow-x: hidden;
+
   
       &__logo {
         @include headings(1.8rem, 400);
