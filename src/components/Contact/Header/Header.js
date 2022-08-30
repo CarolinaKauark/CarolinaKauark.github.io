@@ -1,66 +1,98 @@
-import React, { useContext }  from 'react';
+import React, { useContext, useEffect }  from 'react';
 import { Link } from "react-router-dom";
 import PortifolioContext from '../../../context/PortifolioContext';
-import './Header.scss';
+import { BsMoonStarsFill, BsSun } from 'react-icons/bs';
+import './Header.css';
+import BRIcon from '../../../icons/BRIcon';
+import ENIcon from '../../../icons/ENIcon';
 
 export default function Header() {
-  const { classMenu, handleClick, changeLanguage, isEnglish } = useContext(PortifolioContext);
+  const { classMenu, handleClick, changeLanguage, isEnglish, toggleTheme, theme } = useContext(PortifolioContext);
+
+  useEffect(() => {
+    const root = document.querySelector(':root');
+    root.setAttribute('color-scheme', theme);
+  }, [theme])
+
+  const btnTheme = theme;
 
   return (
     <header className='header'>
-      <div className="header__bar">
+      <div className="header_bar">
         <a href='https://www.linkedin.com/in/carolina-kauark-fontes/'
         target="_blank"
         rel="noreferrer"
-        className="header__bar__logo"><em>CK.</em></a>
+        className="logo"><em>CK.</em></a>
         { isEnglish ? (
-          <nav className="header__bar__menu">
+          <nav className="header_menu">
             <span 
-              className="header__bar__menu__lang"
+              className="lang"
               onClick={ () => changeLanguage()}
-            >PT</span>
+            ><ENIcon /></span>
+
+            <button 
+              className="theme"
+              onClick={ () => toggleTheme()}
+            >{ btnTheme === "light" ? (
+              <BsMoonStarsFill />
+            ) : (
+              <BsSun />
+            )}
+            </button>
+
             <div 
-              className="header__bar__menu__line"
+              className="menu_line"
               onClick={ () => handleClick()}
             >
-              <div className="header__bar__menu__line__1"></div>
-              <div className="header__bar__menu__line__1"></div>
-              <div className="header__bar__menu__line__1"></div>
+              <div className="menu_line1"></div>
+              <div className="menu_line1"></div>
+              <div className="menu_line1"></div>
             </div>
 
             <ul
               className={classMenu}
             >
-              <Link to='/' className="header__bar__menu__ul__link">HOME</Link>
-              <Link to='/about' className="header__bar__menu__ul__link">ABOUT</Link>
-              <Link to='/skills' className="header__bar__menu__ul__link">SKILLS</Link>
-              <Link to='/projects' className="header__bar__menu__ul__link">PROJECTS</Link>
-              <Link to='/contact' className="header__bar__menu__ul__link">CONTACT</Link>  
+              <Link to='/' className="link">HOME</Link>
+              <Link to='/about' className="link">ABOUT</Link>
+              <Link to='/skills' className="link">SKILLS</Link>
+              <Link to='/projects' className="link">PROJECTS</Link>
+              <Link to='/contact' className="link">CONTACT</Link>  
             </ul>
           </nav>
         ) : (
-          <nav className="header__bar__menu">
+          <nav className="header_menu">
             <span 
-              className="header__bar__menu__lang"
+              className="lang"
               onClick={ () => changeLanguage()}
-            >EN</span>
+            ><BRIcon /></span>
+
+            <button 
+              className="theme"
+              onClick={ () => toggleTheme()}
+            >{ btnTheme === "light" ? (
+              <BsMoonStarsFill />
+            ) : (
+              <BsSun />
+            )}
+            </button>
+
             <div 
-              className="header__bar__menu__line"
+              className="menu_line"
               onClick={ () => handleClick()}
             >
-              <div className="header__bar__menu__line__1"></div>
-              <div className="header__bar__menu__line__1"></div>
-              <div className="header__bar__menu__line__1"></div>
+              <div className="menu_line1"></div>
+              <div className="menu_line1"></div>
+              <div className="menu_line1"></div>
             </div>
 
             <ul
               className={classMenu}
             >
-              <Link to='/' className="header__bar__menu__ul__link">INICIO</Link>
-              <Link to='/about' className="header__bar__menu__ul__link">SOBRE</Link>
-              <Link to='/skills' className="header__bar__menu__ul__link">HABILIDADES</Link>
-              <Link to='/projects' className="header__bar__menu__ul__link">PROJETOS</Link>
-              <Link to='/contact' className="header__bar__menu__ul__link">CONTATO</Link>  
+              <Link to='/' className="link">INICIO</Link>
+              <Link to='/about' className="link">SOBRE</Link>
+              <Link to='/skills' className="link">HABILIDADES</Link>
+              <Link to='/projects' className="link">PROJETOS</Link>
+              <Link to='/contact' className="link">CONTATO</Link>  
             </ul>
           </nav>
         )

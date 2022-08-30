@@ -3,25 +3,34 @@ import PortifolioContext from './PortifolioContext';
 import PropTypes from 'prop-types';
 
 export default function Provider({ children }) {
-  const [classMenu, setClassMenu] = useState("header__bar__menu__ul");
+  const [classMenu, setClassMenu] = useState("menu_ul");
 
   const [isEnglish, setIsEnglish] = useState(false);
+  
+  const [theme, setTheme] = useState("light");
+
 
   const handleClick = () => {
-    if(classMenu === "header__bar__menu__ul") {
-      setClassMenu("header__bar__menu__ul active");
+    if(classMenu === "menu_ul") {
+      setClassMenu("menu_ul active");
     } 
-    if(classMenu === "header__bar__menu__ul active") {
-      setClassMenu("header__bar__menu__ul");
+    if(classMenu === "menu_ul active") {
+      setClassMenu("menu_ul");
     }
   }
 
   const updatePage = () => {
-    setClassMenu("header__bar__menu__ul");
+    setClassMenu("menu_ul");
   }
 
   const changeLanguage = () => {
     setIsEnglish(!isEnglish);
+  }
+
+  const toggleTheme = () => {
+    console.log(theme);
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+    console.log(theme);
   }
 
   const contextValue = {
@@ -31,6 +40,8 @@ export default function Provider({ children }) {
     updatePage,
     isEnglish,
     changeLanguage,
+    theme, 
+    toggleTheme,
   }
 
   return (

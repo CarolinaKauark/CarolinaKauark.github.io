@@ -1,0 +1,123 @@
+.contact {
+    margin: 1rem;
+}
+
+.contact_section {
+    max-width: 80%;
+    margin: auto;
+}
+
+.contact_mail {
+    display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.mail_h2 {
+    text-align: center;
+    font-family: var(--fontMu);
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--dark-blue);
+    margin: 1rem 0; 
+}
+
+.contact_mail_a {
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+}
+
+.contact_mail_a:hover {
+    transform: scale(0.98);
+}
+
+.contact_title {
+    margin: 1rem 0;
+}
+
+.contact_title_1 {
+    color: var(--dark-blue);
+    font-family: var(--fontMu);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.contact_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact_container_info_location {
+    color: var(--light-blue);
+    font-family: var(--fontMu);
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.contact_container_info_1 {
+    display: flex;
+    margin: 0.5rem 0;
+    color: var(--dark-blue);
+    font-family: var(--fontMu);
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.contact_container_web {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contact_container_web_icon {
+    font-size: 1.5rem;
+    color: var(--orange);
+}
+
+.contact_container_web_icon:hover {
+    transform: scale(0.95);
+    color: #e681bf;
+}
+
+.web_text {
+    display: none;
+}
+
+.tag {
+    color: var(--light-blue);
+    margin-right: 0.4rem;
+}
+
+@media (min-width: 720px) {
+    .contact {
+        padding-top: 3rem;
+    }
+
+    .contact_mail {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mail_h2 {
+        font-size: 2rem;
+    }
+
+    .contact_title_1 {
+        font-size: 1.2rem;
+    }
+
+    .contact_container_info_location {
+        font-size: 1.1rem;
+    }
+    
+    .contact_container_info_1 {
+        font-size: 1.0rem;
+    }
+}
+
+
+

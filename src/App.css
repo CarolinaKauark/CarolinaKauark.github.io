@@ -1,0 +1,82 @@
+:root {
+
+  --fontRa-light: 'Raleway', sans-serif;
+  --fontMu-light: 'Nunito', sans-serif;
+  --dark-blue-light: #073341;
+  --gray-blue-light: #2f4b4d;
+  --light-blue-light:  #8aacab;
+  --beige-light: #ebe7b7;
+  --orange-light: #ee90ca;
+  --yellow-light: #ecc039;
+  --white-light: #ebebeb;
+  --shadow-light: 0px 1px 6px 3px rgba(0, 0, 0, 0.25);
+  --shadow-dark: 0px 0px 6px 4px rgba(243, 173, 173, 0.514)
+  /* --fontRa-light: 'Raleway', sans-serif;
+  --dark-blue-light: #073341;
+  --gray-blue-light: #2f4b4d;
+  --light-blue-light:  #8aacab;
+  --beige-light: #ebe7b7;
+  --orange-light: #ee90ca;
+  --yellow-light: #ecc039;
+  --white-light: #ebebeb;
+  --shadow-light: (0px 4px 6px rgba(0, 0, 0, 0.25)); */
+
+  /* --fontRa-dark: 'Raleway', sans-serif;
+  --dark-blue-dark: #073341;
+  --gray-blue-dark: #2f4b4d;
+  --light-blue-dark:  #8aacab;
+  --beige-dark: #ebe7b7;
+  --orange-dark: #ee90ca;
+  --yellow-dark: #ecc039;
+  --white-dark: #ebebeb;
+  --shadow-dark: (0px 4px 6px rgba(0, 0, 0, 0.25)); */
+}
+
+[color-scheme="light"] {
+  --fontMu: var(--fontMu-light);
+  --fontRa: var(--fontRa-light);
+  --dark-blue: var(--dark-blue-light);
+  --gray-blue: var(--gray-blue-light);
+  --light-blue:  var(--light-blue-light);
+  --beige: var(--beige-light);
+  --orange: var(--orange-light);
+  --yellow: var(--yellow-light);
+  --white: var(--white-light);
+  --shadow: var(--shadow-light);
+}
+
+[color-scheme="dark"] {
+  --fontMu: var(--fontMu-light);
+  --fontRa: var(--fontRa-light);
+  --dark-blue: var(--white-light);
+  --gray-blue: var(--light-blue-light);
+  --light-blue:  var(--light-blue-light);
+  --beige: var(--beige-light);
+  --orange: var(--orange-light);
+  --yellow: var(--yellow-light);
+  --white: var(--dark-blue-light);
+  --shadow: var(--shadow-dark);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.App {
+  width: 100vw;
+  background-color: var(--white);
+  height: 100vh;
+}
+.App_pages{
+  max-width: 1350px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+

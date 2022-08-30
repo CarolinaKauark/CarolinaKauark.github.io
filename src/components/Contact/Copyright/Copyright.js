@@ -1,11 +1,13 @@
 import React from 'react';
-import "./Copyright.scss";
+import "./Copyright.css";
 
 export default function Copyright() {
   return (
-    <div className='copyright'>
-      <div className='copyright__line'></div>
-      <div className='copyright__text'>© 2022 - Designed and built by Carolina Kauark</div>
-    </div>
+    <footer className='copyright'>
+      <section className='copyright_container'>
+        <div className='copyright_line'></div>
+        <div className='copyright_text'>© 2022 - Designed and built by Carolina Kauark</div>
+      </section>
+    </footer>
   )
 }

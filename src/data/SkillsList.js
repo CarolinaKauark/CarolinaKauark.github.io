@@ -57,19 +57,23 @@ const hardSkills = [
 const softSkills = [
   {
     skill: <Collaboration />,
-    title: 'Collaboration',
+    titleEn: 'Collaboration',
+    title: 'Colaboração',
   },
   {
     skill: <Comunication />,
-    title: 'Comunication',
+    titleEn: 'Comunication',
+    title: 'Comunicação',
   },
   {
     skill: <Creativity />,
-    title: 'Creativity',
+    titleEn: 'Creativity',
+    title: 'Criatividade',
   },
   {
     skill: <Organization />,
-    title: 'Organization',
+    titleEn: 'Organization',
+    title: 'Organização',
   }
 ]
 
